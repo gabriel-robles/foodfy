@@ -1,0 +1,67 @@
+main img {
+    border-radius: 15px;
+    height: 280px;
+    margin-bottom: 48px;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h1 {
+    color: #111;
+    font-size: 36px;
+    line-height: 46px;
+}
+
+.info p {
+    color: #777;
+    font-size: 20px;
+    margin-top: 4px;
+    margin-bottom: 32px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #111;
+    display: inline-block;
+    margin-bottom: 16px;
+    margin-top: 32px;
+}
+
+button  {
+    color: #999;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 8px;
+    background-color: #fff;
+    outline: none;
+}
+
+.ingredients ol {
+    list-style: inside;
+}
+
+.ingredients li {
+    color: #444;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.preparation ol {
+    list-style: inside;
+    list-style-type: decimal;
+}
+
+.preparation li {
+    color: #444;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.information p {
+    color: #444;
+    font-size: 18px;
+    line-height: 28px;
+}
