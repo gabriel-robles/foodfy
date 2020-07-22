@@ -1,8 +1,8 @@
-{% extends "layout.njk" %}
+{% extends "general/layout.njk" %}
 
 {% block head %}
     <title>Foodfy</title>
-    <link rel="stylesheet" href="/styles/information.css">
+    <link rel="stylesheet" href="/styles/general/information.css">
 {% endblock head %}
 
 {% block content %}
@@ -16,7 +16,7 @@
 
         <div class="ingredients">
             <h3>Ingredientes</h3>
-            <button type="button" onclick="onClick1()" id="btn1">Esconder</button>
+            <button type="button" onclick="onClickIngredients()" id="btn-ingredients">Esconder</button>
 
             <ol id="ingredients">
                 {% for ingredient in recipe.ingredients %}
@@ -27,7 +27,7 @@
 
         <div class="preparation">
             <h3>Modo de preparo</h3>
-            <button type="button" onclick="onClick2()" id="btn2">Esconder</button>
+            <button type="button" onclick="onClickPreparation()" id="btn-preparation">Esconder</button>
 
             <ol id="preparation">
                 {% for step in recipe.preparation %}
@@ -38,12 +38,12 @@
 
         <div class="information">
             <h3>Informações adicionais</h3>
-            <button type="button" onclick="onClick3()" id="btn3">Esconder</button>
+            <button type="button" onclick="onClickInformation()" id="btn-information">Esconder</button>
             <div>
                 <p id="information">{{recipe.information}}</p>
             </div>
         </div>
     </main>
 
-    <script src="/scripts.js"></script>
+    <script src="/scripts/hidden.js"></script>
 {% endblock content %}

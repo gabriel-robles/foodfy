@@ -37,10 +37,15 @@ section h1 {
     margin-bottom: 16px;
 }
 
+/*=== CARDS ===*/
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+}
+
+.card {
+    cursor: pointer;
 }
 
 .card-img img {

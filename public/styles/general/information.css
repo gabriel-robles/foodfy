@@ -21,7 +21,9 @@ main img {
     margin-bottom: 32px;
 }
 
-h3 {
+.ingredients h3, 
+.preparation h3, 
+.information h3 {
     font-size: 24px;
     color: #111;
     display: inline-block;
@@ -29,7 +31,7 @@ h3 {
     margin-top: 32px;
 }
 
-button  {
+#btn1, #btn2, #btn3 {
     color: #999;
     font-size: 12px;
     font-weight: 700;
