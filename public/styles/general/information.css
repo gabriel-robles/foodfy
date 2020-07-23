@@ -31,7 +31,9 @@ main img {
     margin-top: 32px;
 }
 
-#btn1, #btn2, #btn3 {
+#btn-ingredients,
+#btn-preparation,
+#btn-information {
     color: #999;
     font-size: 12px;
     font-weight: 700;
