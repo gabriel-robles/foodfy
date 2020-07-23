@@ -14,10 +14,10 @@ module.exports = {
             recipes
         })
     },
-    information (req, res) {
+    show (req, res) {
         const recipeIndex = req.params.index
     
-        return res.render('general/information', {
+        return res.render('general/show', {
             recipe: recipes[recipeIndex]
         })
     }

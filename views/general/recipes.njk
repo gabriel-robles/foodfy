@@ -20,20 +20,6 @@
                 </div>
             </div>
         {% endfor %}
-
-        {% for recipe in recipes %}
-            <div id="{{recipe.id}}" class="card">
-                <div class="card-img">
-                    <img src="{{recipe.image}}" alt="imagem de {{recipe.title}}">
-                </div>
-
-                <div class="card-info">
-                    <p>{{recipe.title}}</p>
-                    <p>por
-                        {{recipe.author}}</p>
-                </div>
-            </div>
-        {% endfor %}
     </div>
 
     <script src="/scripts/window.js"></script>

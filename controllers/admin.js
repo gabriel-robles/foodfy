@@ -8,5 +8,12 @@ module.exports = {
     },
     create(req, res) {
         res.render('admin/create')
+    },
+    show(req, res) {
+        const recipeId = req.params.id
+
+        return res.render('admin/show', {
+            recipe: recipes[recipeId]
+        })
     }
 }

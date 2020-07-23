@@ -31,6 +31,10 @@ main img {
     margin-top: 32px;
 }
 
+.ingredients h3 {
+    margin-top: 0;
+}
+
 #btn-ingredients,
 #btn-preparation,
 #btn-information {
@@ -47,7 +51,9 @@ main img {
     list-style: inside;
 }
 
-.ingredients li {
+.ingredients li,
+.preparation li,
+.information p {
     color: #444;
     font-size: 18px;
     line-height: 28px;
@@ -56,16 +62,4 @@ main img {
 .preparation ol {
     list-style: inside;
     list-style-type: decimal;
-}
-
-.preparation li {
-    color: #444;
-    font-size: 18px;
-    line-height: 28px;
-}
-
-.information p {
-    color: #444;
-    font-size: 18px;
-    line-height: 28px;
 }
