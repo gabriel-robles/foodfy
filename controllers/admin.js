@@ -15,5 +15,12 @@ module.exports = {
         return res.render('admin/show', {
             recipe: recipes[recipeId]
         })
+    },
+    edit(req, res) {
+        const recipeId = req.params.id
+
+        return res.render('admin/edit', {
+            recipe: recipes[recipeId]
+        })
     }
 }

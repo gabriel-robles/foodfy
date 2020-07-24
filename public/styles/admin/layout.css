@@ -1,9 +1,14 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap";
 
+:root {
+    --primary-text-color: #111;
+    --primary-color: #6558C3;
+}
+
 * {
     margin: 0;
     padding: 0;
-    border: 0;
+    border: none;
 }
 
 a {
@@ -11,6 +16,7 @@ a {
 }
 
 body {
+    width: 100%;
     background-color: #fff;
     font-family: 'Roboto', sans-serif;
 }
@@ -21,6 +27,7 @@ header {
 }
 
 .logo-container {
+    width: 90%;
     max-width: 940px;
     margin: 0 auto;
 }

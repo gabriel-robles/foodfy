@@ -1,0 +1,47 @@
+{% extends "admin/layout.njk" %}
+
+{% block head %}
+    <title>Editar - Receita</title>
+    <link rel="stylesheet" href="/styles/admin/edit.css">
+{% endblock head %}
+
+{% block content %}
+    <div class="form-container">
+        <form action="/admin/recipes/{{recipe.id}}" method="_method=PUT" class="form-edit">
+            <h3>Editando receita</h3>
+
+            <p>Imagem da receita</p>
+            <input type="url" name="avatar_url" value="{{recipe.image}}" />
+
+            <p>Ingredientes</p>
+            <div id="ingredients">
+                <div class="ingredient">
+                    {% for ingredient in recipe.ingredients %}
+                        <input type="text" name="ingredients[]" value="{{ingredient}}" />
+                    {% endfor %}
+                </div>
+            </div>
+            <button type="button" class="add-ingredient">Adicionar novo ingrediente</button>
+
+            <p>Modo de preparo</p>
+            <div id="preparation">
+                <div class="preparation">
+                    {% for prepare in recipe.preparation %}
+                        <input type="text" name="preparation[]" value="{{prepare}}" />
+                    {% endfor %}
+                </div>
+            </div>
+            <button type="button" class="add-preparation">Adicionar novo passo</button>
+
+            <p>Informações adicionais</p>
+            <textarea name="information" rows="10 ">{{recipe.information}}</textarea>
+
+            <button type="submit">Salvar receita</button>
+        </form>
+
+        <form action="/admin/recipes" method="_method=DELETE" class="form-delete">
+            <input type="hidden" name="id" value={{recipe.id}}>
+            <button type="submit">Deletar</button>
+        </form>
+    </div>
+{% endblock content %}

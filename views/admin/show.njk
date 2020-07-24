@@ -9,8 +9,7 @@
     <main>
         <div class="recipe-header">
             <h2>Receita: {{recipe.title}}</h2>
-
-            <a href="#">Editar receita</a>
+            <a href="/admin/recipes/{{recipe.id}}/edit">Editar receita</a>
         </div>
         <img src="{{recipe.image}}" alt="imagem de {{recipe.image}}">
         <div class="info">
