@@ -33,10 +33,10 @@ module.exports = {
     edit(req, res) {
         const {
             id
-        } = req.params.id 
+        } = req.params
 
         foundRecipe = data.recipes.find((recipe) => {
-            return recipes.id == id
+            return recipe.id == id
         })
 
         if (!foundRecipe) return res.send('Recipe not found')
@@ -76,6 +76,51 @@ module.exports = {
             res.render('admin/recipes', {
                 recipes: data.recipes
             })
+        })
+    },
+    put(req, res) {
+        const {
+            id
+        } = req.body
+        let index = 0
+
+        foundRecipe = data.recipes.find((recipe, foundIndex)  => {
+            if (id == recipe.id) {
+                index = foundIndex
+                return true
+            }
+        })
+
+        if (!foundRecipe) return res.send('Recipe not found')
+
+        const recipe = {
+            ...foundRecipe,
+            ...req.body
+        }
+
+        data.recipes[index] = recipe
+
+        fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
+            if (err) return res.send('Write file error')
+
+            res.redirect(`/admin/recipes/${id}`)
+        })
+    },
+    delete(req, res) {
+        const {
+            id
+        } = req.body
+        
+        const filteredRecipes = data.recipes.filter(function (recipe) {
+            return recipe.id != id
+        })
+
+        data.recipes = filteredRecipes
+
+        fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
+            if (err) return res.send('Write file error')
+
+            res.redirect(`/admin/recipes`)
         })
     }
 }
