@@ -1,9 +1,9 @@
-const recipes = require('../data')
+const data = require('../data.json')
 
 module.exports = {
     home (req, res) {
         return res.render('general/home', {
-            recipes
+            recipes: data.recipes
         })
     },
     about (req, res) {
@@ -11,14 +11,26 @@ module.exports = {
     },
     recipes (req, res) {
         return res.render('general/recipes', {
-            recipes
+            recipes: data.recipes
         })
     },
     show (req, res) {
-        const recipeIndex = req.params.index
-    
+        const {
+            id
+        } = req.params 
+
+        foundRecipe = data.recipes.find((recipe) => {
+            return recipe.id == id
+        })
+
+        if (!foundRecipe) return res.send('Recipe not found')
+
+        const recipe = {
+            ...foundRecipe
+        }
+
         return res.render('general/show', {
-            recipe: recipes[recipeIndex]
+            recipe
         })
     }
 }

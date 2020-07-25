@@ -67,7 +67,7 @@ main img {
 }
 
 .ingredients ol {
-    list-style: inside;
+    list-style: none;
 }
 
 .ingredients li,
@@ -79,6 +79,5 @@ main img {
 }
 
 .preparation ol {
-    list-style: inside;
-    list-style-type: decimal;
+    list-style: none;
 }
